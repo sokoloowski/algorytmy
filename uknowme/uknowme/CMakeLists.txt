@@ -3,4 +3,4 @@ project(uknowme)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(uknowme main.cpp Bubble_sort.cpp Bubble_sort.h)
+add_executable(uknowme main.cpp Bar_sort.cpp Bar_sort.h)

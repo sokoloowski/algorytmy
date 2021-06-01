@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Bubble_sort.h"
+#include "Bar_sort.h"
 using namespace std;
 
 
 int main() {
-    Bubble_sort::bubble_sort_main();
+    Bar_sort::bar_sort_main();
 
 
 
