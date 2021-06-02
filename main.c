@@ -9,7 +9,7 @@
  * 
  */
 
-#include "sortowanie/merge_iter.c"
+#include "sortowanie/mergesort_iter.c"
 
 int main(void) {
     double unsorted[] = {1, 5, 4.36, 7, 12, 17, -11, 8, 0, 86, 12, 1, 17, 2, 21, 56, 53, -20, 10, 15};

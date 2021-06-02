@@ -1,5 +1,5 @@
 /**
- * @file merge_iter.c
+ * @file mergesort_iter.c
  * @author Piotr Sokołowski (piotrsokolowski00@outlook.com)
  * @brief Sortowanie przez scalanie - wersja iteracyjna
  * @version 0.1
