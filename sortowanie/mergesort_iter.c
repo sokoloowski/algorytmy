@@ -19,7 +19,7 @@
  * @param n Rozmiar tablicy
  * @return double* Posortowana tablica
  */
-double *merge_iter(double *wejscie, double *wyjscie, int n)
+double *mergesort_iter(double *wejscie, double *wyjscie, int n)
 {
     int dlugosc_podciagu, poczatek_podciagu, i, j, ograniczenie_i, ograniczenie_j, k;
     double *pomoc;
@@ -69,21 +69,16 @@ double *merge_iter(double *wejscie, double *wyjscie, int n)
  * 
  * @param to_sort Tablica do posortowania
  */
-void merge_iter_main(double *to_sort)
+void mergesort_iter_main(double *to_sort)
 {
     double tablica[20] = {0};
     double tablica_pomocnicza[20] = {0};
     for (int i = 0; i < 20; i++)
-    {
         tablica[i] = to_sort[i];
-    }
-    double *merge_sort_iter;
-    merge_sort_iter = merge_iter(tablica, tablica_pomocnicza, 20);
+    double *sorted = mergesort_iter(tablica, tablica_pomocnicza, 20);
 
     printf("Merge sort, iteracyjnie\n");
     for (int i = 0; i < 20; i++)
-    {
-        printf("%lf ", merge_sort_iter[i]);
-    }
-    printf("\n");
+        printf("%lf ", sorted[i]);
+    printf("\n\n");
 }
