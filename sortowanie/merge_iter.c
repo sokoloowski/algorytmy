@@ -1,5 +1,24 @@
+/**
+ * @file merge_iter.c
+ * @author Piotr Sokołowski (piotrsokolowski00@outlook.com)
+ * @brief Sortowanie przez scalanie - wersja iteracyjna
+ * @version 0.1
+ * @date 2021-06-02
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <stdio.h>
 
+/**
+ * @brief Sortowanie przez scalanie - iteracyjnie
+ * 
+ * @param wejscie Tablica do posortowania
+ * @param wyjscie Pomocnicza tablica do sortowania elementów
+ * @param n Rozmiar tablicy
+ * @return double* Posortowana tablica
+ */
 double *merge_iter(double *wejscie, double *wyjscie, int n)
 {
     int dlugosc_podciagu, poczatek_podciagu, i, j, ograniczenie_i, ograniczenie_j, k;
@@ -44,21 +63,26 @@ double *merge_iter(double *wejscie, double *wyjscie, int n)
     return wejscie;
 }
 
-void merge_iter_main(double *to_sort, int size)
+/**
+ * @brief Funkcja główna sortowania przez scalanie w wersji iteracyjnej.
+ * Po zakończeniu działania algorytmu wypisywana jest posortowana tablica
+ * 
+ * @param to_sort Tablica do posortowania
+ */
+void merge_iter_main(double *to_sort)
 {
     double tablica[20] = {0};
     double tablica_pomocnicza[20] = {0};
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < 20; i++)
     {
         tablica[i] = to_sort[i];
     }
     double *merge_sort_iter;
-    merge_sort_iter = merge_iter(tablica, tablica_pomocnicza, size);
+    merge_sort_iter = merge_iter(tablica, tablica_pomocnicza, 20);
 
     printf("Merge sort, iteracyjnie\n");
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < 20; i++)
     {
-        double element = merge_sort_iter[i];
         printf("%lf ", merge_sort_iter[i]);
     }
     printf("\n");
