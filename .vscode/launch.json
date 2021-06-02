@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "gcc - Linux (debug)",
+            "name": "Debugowanie",
             "type": "cppdbg",
             "request": "launch",
             // "program": "${fileDirname}/bin/${fileBasenameNoExtension}",
@@ -23,30 +23,14 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: Linux",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "gcc - Windows (debug)",
-            "type": "cppdbg",
-            "request": "launch",
-            // "program": "${fileDirname}/bin/${fileBasenameNoExtension}",
-            "program": "${workspaceFolder}/bin/main.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Włącz formatowanie kodu dla gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "C/C++: Windows",
-            "miDebuggerPath": "gdb.exe"
+            "preLaunchTask": "LinuxBuild",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "windows": {
+                "type": "cppdbg",
+                "miDebuggerPath": "gdb.exe",
+                "preLaunchTask": "WinBuild",
+                "program": "${workspaceFolder}/bin/main.exe"
+            }
         }
     ]
 }

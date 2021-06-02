@@ -4,7 +4,7 @@ By korzystać z kodów zaleca się korzystanie z [Visual Studio Code](https://jm
 
 ## Konfiguracja
 
-Domyślnym środowiskiem jest Linux. Konfiguracja dla Windowsa jest dostępna w panelu debugowania (skrót <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> lub czwarta ikonka od góry w panelu bocznym). Obie konfiguracje zostały przetestowane i działają prawidłowo.
+Wszystko powinno działać od razu. Wciśnij <kbd>F5</kbd> i gotowe!
 
 ## Różnice
 

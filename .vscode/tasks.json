@@ -2,13 +2,12 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: Linux",
+            "label": "LinuxBuild",
             "command": "/usr/bin/gcc",
             "args": [
                 "-g",
                 "${workspaceFolder}/main.c",
                 "-o",
-                // "${fileDirname}/bin/${fileBasenameNoExtension}"
                 "${workspaceFolder}/bin/main"
             ],
             "options": {
@@ -20,18 +19,16 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "Zadanie wygenerowane przez debuger."
+            }
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: Windows",
+            "label": "WinBuild",
             "command": "gcc.exe",
             "args": [
                 "-g",
                 "${workspaceFolder}/main.c",
                 "-o",
-                // "${fileDirname}/bin/${fileBasenameNoExtension}"
                 "${workspaceFolder}/bin/main.exe"
             ],
             "options": {
@@ -43,8 +40,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "Zadanie wygenerowane przez debuger."
+            }
         }
     ],
     "version": "2.0.0"
