@@ -3,3 +3,5 @@
 /uknowme/cmake-build-debug
 /uknowme/uknowme/.idea
 /uknowme/uknowme/cmake-build-debug
+*.vs
+*out
