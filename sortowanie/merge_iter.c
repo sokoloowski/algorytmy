@@ -43,3 +43,23 @@ double *merge_iter(double *wejscie, double *wyjscie, int n)
 
     return wejscie;
 }
+
+void merge_iter_main(double *to_sort, int size)
+{
+    double tablica[20] = {0};
+    double tablica_pomocnicza[20] = {0};
+    for (int i = 0; i < size; i++)
+    {
+        tablica[i] = to_sort[i];
+    }
+    double *merge_sort_iter;
+    merge_sort_iter = merge_iter(tablica, tablica_pomocnicza, size);
+
+    printf("Merge sort, iteracyjnie\n");
+    for (int i = 0; i < size; i++)
+    {
+        double element = merge_sort_iter[i];
+        printf("%lf ", merge_sort_iter[i]);
+    }
+    printf("\n");
+}
