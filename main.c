@@ -16,7 +16,7 @@ int main(void)
     double to_sort[] = {1, 5, 4.36, 7, 12, 17, -11, 8, 0, 86, 12, 1, 17, 2, 21, 56, 53, -20, 10, 15};
     int to_sort_int[] = {1, 5, 4, 7, 12, 17, 11, 8, 0, 86, 12, 1, 17, 2, 21, 56, 53, 20, 10, 15};
 
-    countsort_main(to_sort_int);
+    countingsort_main(to_sort_int);
 
     printf("Nieposortowana tablica\n");
     for (int i = 0; i < 20; i++)
