@@ -9,8 +9,6 @@
  * 
  */
 
-#include <stdio.h>
-
 void mergesort_rec_merge(double *table, int leftSide, int center, int rightSide)
 {
     double pom[20];
