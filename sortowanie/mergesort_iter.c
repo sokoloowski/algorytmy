@@ -77,7 +77,7 @@ void mergesort_iter_main(double *to_sort)
         tablica[i] = to_sort[i];
     double *sorted = mergesort_iter(tablica, tablica_pomocnicza, 20);
 
-    printf("Merge sort, iteracyjnie\n");
+    printf("Mergesort, iteracyjnie\n");
     for (int i = 0; i < 20; i++)
         printf("%lf ", sorted[i]);
     printf("\n\n");
