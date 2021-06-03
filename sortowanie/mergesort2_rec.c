@@ -45,6 +45,6 @@ void mergesort2_rec_main(double *to_sort)
 
     printf("Mergesort 2, rekurencyjnie\n");
     for (int i = 0; i < 20; i++)
-        printf("%lf ", tablica[i]);
+        printf("%.2f ", tablica[i]);
     printf("\n\n");
 }

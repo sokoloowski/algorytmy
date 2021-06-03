@@ -90,7 +90,7 @@ void heapsort_main(double *to_sort)
     printf("Heapsort\n");
     for (int i = 0; i < 20; i++)
     {
-        printf("%lf ", tab[i]);
+        printf("%.2f ", tab[i]);
     }
     printf("\n\n");
 }

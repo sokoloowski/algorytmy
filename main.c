@@ -41,8 +41,8 @@ int main(void)
 
     printf("Nieposortowana tablica\n");
     for (int i = 0; i < 20; i++)
-        printf("%lf ", to_sort[i]);
-    printf("\n");
+        printf("%.2f ", to_sort[i]);
+    printf("\n\n");
 
     return 0;
 }

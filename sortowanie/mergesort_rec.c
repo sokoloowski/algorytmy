@@ -69,6 +69,6 @@ void mergesort_rec_main(double *to_sort)
 
     printf("Mergesort, rekurencyjnie\n");
     for (int i = 0; i < 20; i++)
-        printf("%lf ", tablica[i]);
+        printf("%.2f ", tablica[i]);
     printf("\n\n");
 }

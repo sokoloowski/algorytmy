@@ -77,6 +77,6 @@ void mergesort_iter_main(double *to_sort)
 
     printf("Mergesort, iteracyjnie\n");
     for (int i = 0; i < 20; i++)
-        printf("%lf ", sorted[i]);
+        printf("%.2f ", sorted[i]);
     printf("\n\n");
 }
