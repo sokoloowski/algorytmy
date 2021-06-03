@@ -3,6 +3,7 @@
 #include "Bubble_sort.h"
 #include "Merge_sort_rec.h"
 #include "Merge_sort_iter.h"
+#include "Heap_sort.h"
 using namespace std;
 
 
@@ -11,7 +12,7 @@ int main() {
 //// Counting sort
     Counting_sort::counting_sort_main();
 
-//// Bucket_sort.h
+//// Bucket_sort
     Bucket_sort::bucket_sort_main();
 
 //// Bubble sort
@@ -23,6 +24,8 @@ int main() {
 //// Merge sort iter.
     Merge_sort_iter::merge_sort_iter_main();
 
+//// Heap sort
+    Heap_sort::heap_sort_main();
 
 
 
