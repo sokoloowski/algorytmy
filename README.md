@@ -1,6 +1,6 @@
 # Algorytmy i struktury danych
 
-![CMake - 3.20](https://img.shields.io/badge/CMake-3.20-success)
+![cmake - 3.20](https://img.shields.io/badge/cmake-3.20-success)
 
 ## Algorytmy sortujące
 
