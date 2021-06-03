@@ -15,3 +15,12 @@ Linux wyświetla wyniki w zakładce `Terminal`. W przypadku Windowsa, wyniki poj
 Do prawidłowego działania wymagane jest rozszerzenie [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). By je zainstalować, przejdź do panelu rozszerzeń lub w wierszu poleceń (<kbd>Ctrl</kbd> + <kbd>P</kbd>) wklej następującą komendę:
 
     ext install ms-vscode.cpptools
+
+## Algorytmy sortujące
+
+- [ ] bąbelkowe
+- [ ] kubełkowe
+- [x] przez zliczanie
+- [x] przez kopcowanie
+- [x] szybkie
+- [x] przez scalanie
