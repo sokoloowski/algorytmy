@@ -24,7 +24,7 @@ int main(void)
     printf("\n\n");
 
     mergesort_iter_main(to_sort);
-    mergesort2_iter_main(to_sort); // błędny, do poprawy
+    // mergesort2_iter_main(to_sort); // błędny, do poprawy
     mergesort_rec_main(to_sort);
     mergesort2_rec_main(to_sort);
     quicksort_main(to_sort);
