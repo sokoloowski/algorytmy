@@ -12,8 +12,8 @@ class Merge_sort_rec {
 
 private:
     static void print();
-    static void merge(double* table, int leftSide, int center, int rightSide);
-    static void splitAndSort(double* table, int x1, int x2);
+    static void merge(double* table, int low, int mid, int high);
+    static void splitAndSort(double* table, int low, int high);
 
 public:
     static void merge_sort_rec_main();

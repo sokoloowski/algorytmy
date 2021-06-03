@@ -14,7 +14,7 @@ private:
     static void print(double* tab, int n);
     static void heapify(double *arr, int n, int i);
     static void build_heap(double a[], int n);
-    static void heap_sort(double* tab, int n);
+    static void heap_sort(double *tab, int n);
 
 public:
     static void heap_sort_main();

@@ -13,38 +13,47 @@ void Merge_sort_rec::print() {
     }
 }
 
-void Merge_sort_rec::merge(double *table, int leftSide, int center, int rightSide) {
+void Merge_sort_rec::merge(double *table, int low, int mid, int high) {
     double pom[n];
-    for(int i=leftSide; i <= rightSide; ++i){
+    for(int i=low; i <= high; ++i){
         pom[i] = table[i];
     }
-    int i = leftSide;
-    int j = center + 1;
-    int k = leftSide;
-    while(i <= center && j <= rightSide) {
+    int i = low;
+    int j = mid + 1;
+    int k = low;
+
+    while(i <= mid && j <= high) {
         if (pom[i] < pom[j]) {
-            table[k++] = pom[i++];
+            table[k] = pom[i];
+            k++;
+            i++;
         }
         else {
-            table[k++] = pom[j++];
+            table[k] = pom[j];
+            k++;
+            j++;
         }
     }
 
-    while(i <= center){
-        table[k++] = pom[i++];
+    while(i <= mid){
+        table[k] = pom[i];
+        k++;
+        i++;
     }
 
-    while(j <= rightSide){
-        table[k++] = pom[j++];
+    while(j <= high){
+        table[k] = pom[j];
+        k++;
+        j++;
     }
 }
 
-void Merge_sort_rec::splitAndSort(double *table, int x1, int x2) {
-    if(x1<x2){
-        int x3 = (x2+x1)/2;
-        splitAndSort(table,x1,x3);
-        splitAndSort(table,x3+1,x2);
-        merge(tab, x1,x3,x2);
+void Merge_sort_rec::splitAndSort(double *table, int low, int high) {
+    if(low < high){
+        int mid = (high + low) / 2;
+        splitAndSort(table, low, mid);
+        splitAndSort(table, mid + 1, high);
+        merge(tab, low, mid, high);
     }
 }
 

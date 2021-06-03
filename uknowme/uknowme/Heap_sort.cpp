@@ -3,7 +3,6 @@
 //
 
 #include "Heap_sort.h"
-int heap_size;
 
 
 void Heap_sort::print(double* tab, int n) {
