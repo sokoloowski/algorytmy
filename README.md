@@ -4,7 +4,7 @@
 
 ## Algorytmy sortujące
 
-- [ ] bąbelkowe
+- [x] bąbelkowe
 - [ ] kubełkowe
 - [x] przez zliczanie
 - [x] przez kopcowanie

@@ -29,6 +29,7 @@ int main(void)
     mergesort2_rec_main(to_sort);
     quicksort_main(to_sort);
     heapsort_main(to_sort);
+    bubblesort_main(to_sort);
 
     printf("Nieposortowana tablica\n");
     for (int i = 0; i < 20; i++)
