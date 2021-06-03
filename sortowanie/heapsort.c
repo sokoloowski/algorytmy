@@ -1,7 +1,7 @@
 /**
  * @file heapsort.c
  * @author Piotr Sokołowski (piotrsokolowski00@outlook.com)
- * @brief 13.04.2021
+ * @brief Sortowanie przez kopcowanie (sortowanie stogowe)
  * @version 0.1
  * @date 2021-06-03
  * 
@@ -11,21 +11,34 @@
 
 int heapsort_heap_size = 11;
 
-int heapsort_parent(int i)
-{
-    return i / 2;
-}
-
+/**
+ * @brief Lewa część kopca
+ * 
+ * @param i początek kopca
+ * @return ostatni element lewej części kopca
+ */
 int heapsort_left(int i)
 {
     return 2 * i;
 }
 
+/**
+ * @brief Prawa część kopca
+ * 
+ * @param i początek kopca
+ * @return pierwszy element prawej części kopca
+ */
 int heapsort_right(int i)
 {
     return 2 * i + 1;
 }
 
+/**
+ * @brief Kopcowanie
+ * 
+ * @param tab tablica do posortowania
+ * @param i początek tablicy
+ */
 void heapsort_heapify(double tab[], int i)
 {
     int l = heapsort_left(i), r = heapsort_right(i), max_index;
@@ -54,6 +67,11 @@ void heapsort_heapify(double tab[], int i)
     }
 }
 
+/**
+ * @brief Budowanie kopca
+ * 
+ * @param tab tablica do posortowania
+ */
 void heapsort_build_heap(double tab[])
 {
     for (int i = heapsort_heap_size / 2; i >= 0; i--)
@@ -62,6 +80,12 @@ void heapsort_build_heap(double tab[])
     }
 }
 
+/**
+ * @brief Główna funkcja sortująca
+ * 
+ * @param tab tablica do posortowania
+ * @param n rozmiar tablicy tab
+ */
 void heapsort(double tab[], int n)
 {
     double temp;
@@ -78,6 +102,11 @@ void heapsort(double tab[], int n)
     }
 }
 
+/**
+ * @brief Sortowanie przez kopcowanie - główna funkcja programu
+ * 
+ * @param to_sort tablica do posortowania
+ */
 void heapsort_main(double *to_sort)
 {
     double tab[20] = {0};
