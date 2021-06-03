@@ -40,9 +40,9 @@ a błędy i ostrzeżenia można zignorować.
 |                     Algorytm | Czas wykonywania       |
 | ---------------------------: | :--------------------- |
 |                    quicksort | 11.11s                 |
-|                   merge_iter | 11.81s                 |
-|                    kubelkowe | 5.14s (32768 kubełków) |
-| kubelkowe (tablica struktur) | 0.68s (32768 kubełków) |
+|       mergesort (iteracyjny) | 11.81s                 |
+|                    kubełkowe | 5.14s (32768 kubełków) |
+| kubełkowe (tablica struktur) | 0.68s (32768 kubełków) |
 |                     heapsort | 55.69s                 |
 
 ### Dla *n* = 100 000 000 i wartości posortowanych:
@@ -50,9 +50,9 @@ a błędy i ostrzeżenia można zignorować.
 |                     Algorytm | Czas wykonywania       |
 | ---------------------------: | :--------------------- |
 |                    quicksort | brak odpowiedzi - błąd |
-|                   merge_iter | 5.06s                  |
-|                    kubelkowe | 3.96s (32768 kubełków) |
-| kubelkowe (tablica struktur) | 0.41s                  |
+|       mergesort (iteracyjny) | 5.06s                  |
+|                    kubełkowe | 3.96s (32768 kubełków) |
+| kubełkowe (tablica struktur) | 0.41s                  |
 |                     heapsort | 23.92s                 |
 
 Dla quicksort juz dla 100 tys. brak odpowiedzi - błąd!
