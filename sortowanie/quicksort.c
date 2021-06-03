@@ -1,5 +1,24 @@
+/**
+ * @file quicksort.c
+ * @author Piotr Sokołowski (piotrsokolowski00@outlook.com)
+ * @brief Sortowanie szybkie
+ * @version 0.1
+ * @date 2021-06-03
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <stdio.h>
-#define N 9
+
+/**
+ * @brief Dzielenie tablicy na mniejsze (dziel i zwyciężaj)
+ * 
+ * @param Tab tablica do podzielenia
+ * @param p początek
+ * @param r koniec
+ * @return środek tablicy Tab
+ */
 int quicksort_partition(double *Tab, int p, int r)
 {
     int i = p - 1, j = r + 1;
@@ -23,6 +42,13 @@ int quicksort_partition(double *Tab, int p, int r)
     }
 }
 
+/**
+ * @brief Quicksort
+ * 
+ * @param Tab tablica do posortowania
+ * @param p początek przedziału
+ * @param r koniec przedziału
+ */
 void quicksort(double *Tab, int p, int r)
 {
     int q;
@@ -34,6 +60,12 @@ void quicksort(double *Tab, int p, int r)
     }
 }
 
+/**
+ * @brief Funkcja główna sortowania szybkiego.
+ * Po zakończeniu działania algorytmu wypisywana jest posortowana tablica
+ * 
+ * @param to_sort Tablica do posortowania
+ */
 int quicksort_main(double *to_sort)
 {
     double tablica[20] = {0};
