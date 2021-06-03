@@ -1,3 +1,10 @@
+/**
+ * TO SORTOWANIE NIE DZIAŁA!!!
+ * 
+ * PRAWDOPODOBNIE PROBLEM JEST W FUNKCJI
+ * mergesort2_iter() 
+ */
+
 #include <stdio.h>
 
 void mergesort2_iter_merge(double *Table, int start, int wsk, int stop)
@@ -6,7 +13,7 @@ void mergesort2_iter_merge(double *Table, int start, int wsk, int stop)
     double b[20];
     for (int x = start; x <= stop; x++)
         b[x] = Table[x];
-    while (i <= wsk && j <= stop)
+    while (i < wsk && j < stop)
     {
         if (b[i] < b[j])
         {
