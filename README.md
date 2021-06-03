@@ -9,7 +9,7 @@ a błędy i ostrzeżenia można zignorować.
 ## Algorytmy sortujące
 
 - [x] bąbelkowe
-- [ ] kubełkowe
+- [x] kubełkowe
 - [x] przez zliczanie
 - [x] przez kopcowanie
 - [x] szybkie
