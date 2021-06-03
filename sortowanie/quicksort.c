@@ -9,6 +9,8 @@
  * 
  */
 
+#include <stdio.h>
+
 /**
  * @brief Dzielenie tablicy na mniejsze (dziel i zwyciężaj)
  * 

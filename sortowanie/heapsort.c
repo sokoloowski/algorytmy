@@ -9,6 +9,8 @@
  * 
  */
 
+#include <stdio.h>
+
 int heapsort_heap_size = 11;
 
 /**

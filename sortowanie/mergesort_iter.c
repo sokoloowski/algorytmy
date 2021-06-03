@@ -9,6 +9,8 @@
  * 
  */
 
+#include <stdio.h>
+
 /**
  * @brief Sortowanie przez scalanie - iteracyjnie
  * 

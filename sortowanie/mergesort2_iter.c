@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void mergesort2_iter_merge(double *Table, int start, int wsk, int stop)
 {
     int i = start, j = wsk + 1, k = start;

@@ -9,6 +9,8 @@
  * 
  */
 
+#include <stdio.h>
+
 /**
  * @brief Sortowanie przez zliczanie - główna funkcja programu
  * 
