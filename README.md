@@ -2,6 +2,9 @@
 
 ![cmake - 3.20](https://img.shields.io/badge/cmake-3.20-success)
 
+**Uwaga:** IDE może krzyczeć, że nie zna funkcji, bo nie zostały one zadeklarowane -
+wszystko jest dołączane za pomocą CMake, a błędy i ostrzeżenia można zignorować.
+
 ## Algorytmy sortujące
 
 - [x] bąbelkowe
