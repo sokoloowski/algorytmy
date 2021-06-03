@@ -11,15 +11,6 @@
 
 #include <stdio.h>
 
-#include "sortowanie/countsort.c"
-
-#include "sortowanie/mergesort_iter.c"
-#include "sortowanie/mergesort2_iter.c"
-#include "sortowanie/mergesort_rec.c"
-#include "sortowanie/mergesort2_rec.c"
-#include "sortowanie/quicksort.c"
-#include "sortowanie/heapsort.c"
-
 int main(void)
 {
     double to_sort[] = {1, 5, 4.36, 7, 12, 17, -11, 8, 0, 86, 12, 1, 17, 2, 21, 56, 53, -20, 10, 15};
