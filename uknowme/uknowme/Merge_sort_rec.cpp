@@ -49,8 +49,11 @@ void Merge_sort_rec::splitAndSort(double *table, int x1, int x2) {
 }
 
 void Merge_sort_rec::merge_sort_rec_main() {
+
     cout << endl << "Merge sort rec: " << endl;
+
     splitAndSort(tab,0,n-1);
     print();
+
     cout << endl << "End of Merge sort" << endl;
 }
