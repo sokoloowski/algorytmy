@@ -1,4 +1,20 @@
-void countsort_main(int *to_sort)
+/**
+ * @file countingsort.c
+ * @author Piotr Sokołowski (piotrsokolowski00@outlook.com)
+ * @brief Sortowanie przez zliczanie
+ * @version 0.1
+ * @date 2021-06-03
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
+/**
+ * @brief Sortowanie przez zliczanie - główna funkcja programu
+ * 
+ * @param to_sort tablica do posortowania
+ */
+void countingsort_main(int *to_sort)
 {
     int tab[20] = {0};
     for (int i = 0; i < 20; i++)
@@ -19,7 +35,7 @@ void countsort_main(int *to_sort)
         c[tab[i]]--;
     }
 
-    printf("Countsort\n");
+    printf("Countingsort\n");
     for (int i = 0; i < 20; i++)
         printf("%d ", wynik[i]);
     printf("\n\n");
