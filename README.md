@@ -32,3 +32,27 @@ a błędy i ostrzeżenia można zignorować.
 | przez wybieranie |                                                              O(*n*²)                                                              |
 |     szybkie      |                                                           Θ(*n*log*n*)                                                            |
 | przez kopcowanie |                                                           O(*n*log*n*)                                                            |
+
+## Działanie algorytmów sortujących w praktyce
+
+### Dla *n* = 100 000 000 i wartości losowych:
+
+|                     Algorytm | Czas wykonywania       |
+| ---------------------------: | :--------------------- |
+|                    quicksort | 11.11s                 |
+|                   merge_iter | 11.81s                 |
+|                    kubelkowe | 5.14s (32768 kubełków) |
+| kubelkowe (tablica struktur) | 0.68s (32768 kubełków) |
+|                     heapsort | 55.69s                 |
+
+### Dla *n* = 100 000 000 i wartości posortowanych:
+
+|                     Algorytm | Czas wykonywania       |
+| ---------------------------: | :--------------------- |
+|                    quicksort | brak odpowiedzi - błąd |
+|                   merge_iter | 5.06s                  |
+|                    kubelkowe | 3.96s (32768 kubełków) |
+| kubelkowe (tablica struktur) | 0.41s                  |
+|                     heapsort | 23.92s                 |
+
+Dla quicksort juz dla 100 tys. brak odpowiedzi - błąd!
