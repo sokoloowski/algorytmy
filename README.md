@@ -29,10 +29,10 @@ a błędy i ostrzeżenia można zignorować.
 |  kubełkowe BEZ M |                                                                                                                                   |
 |    bąbelkowe     |                                                              O(*n*²)                                                              |
 | przez scalanie R |                                          O(*n*log*n*), wymaga O(*n*) dodatkowej pamięci                                           |
-| przez scalanie I |                                                                                                                                   |
+| przez scalanie I |                                  jw. tu jednak z braku rekursji zaoszczędzimy czas i pamięć                                       |
 | przez kopcowanie |                                                           O(*n*log*n*)                                                            |
 | szybkie  STAND   |                                                Θ(*n*log*n*), pesymistyczny O(*n*²)                                                |
-| szybkie HOARE'S  |                                                                                                                                   |
+| szybkie HOARE'S  |                                                Θ(*n*log*n*), pesymistyczny O(*n*²)                                                |
 
 | Nazwa algorytmu  |                                                             Złożoność                                                             |
 | :--------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
