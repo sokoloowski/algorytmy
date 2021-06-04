@@ -11,4 +11,6 @@ add_executable(uknowme
         Merge_sort_iter.cpp Merge_sort_iter.h
         Bucket_sort.cpp Bucket_sort.h
         Bubble_sort.cpp Bubble_sort.h
-        Heap_sort.cpp Heap_sort.h)
+        Heap_sort.cpp Heap_sort.h
+        Quick_sort_base.cpp Quick_sort_base.h
+        Quick_sort_advanced.cpp Quick_sort_advanced.h)
