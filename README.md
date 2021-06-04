@@ -1,17 +1,66 @@
 # Algorytmy i struktury danych
 
-By korzystać z kodów zaleca się korzystanie z [Visual Studio Code](https://jmeubank.github.io/tdm-gcc/download/) na systemie Linux (kompilator `gcc`, debugger `gdb`). W przypadku systemu Windows, zalecane jest wykorzystanie kompilatora [TDM-GCC](https://jmeubank.github.io/tdm-gcc/download/). Umożliwi to wygodne korzystanie z repozytorium bez potrzeby kopiowania kodu.
+![cmake - 3.20](https://img.shields.io/badge/cmake-3.20-success)
 
-## Konfiguracja
+**Uwaga:** IDE może krzyczeć, że nie zna funkcji, bo nie zostały one zadeklarowane
+(`implicit declaration of function`) - wszystko jest dołączane za pomocą CMake,
+a błędy i ostrzeżenia można zignorować.
 
-Domyślnym środowiskiem jest Linux. Konfiguracja dla Windowsa jest dostępna w panelu debugowania (skrót <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> lub czwarta ikonka od góry w panelu bocznym). Obie konfiguracje zostały przetestowane i działają prawidłowo.
+## Algorytmy sortujące
 
-## Różnice
+- [x] przez zliczanie
+- [x] kubełkowe         - (malloc)
+- [x] bąbelkowe
+- [x] przez scalanie    - (rec)
+- [x] przez scalanie    - (iter)
+- [x] przez kopcowanie
+- [x] szybkie           - (standart partition)
+- [x] szybkie           - (Hoare’s partition)
 
-Linux wyświetla wyniki w zakładce `Terminal`. W przypadku Windowsa, wyniki pojawiają się w `Debug console`, wśród wiadomości debuggera.
+## Złożoność algorytmów sortujących
 
-## Wymagania
+*n* - liczba elementów do posortowania\
+*k* - liczba różnych elementów
 
-Do prawidłowego działania wymagane jest rozszerzenie [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). By je zainstalować, przejdź do panelu rozszerzeń lub w wierszu poleceń (<kbd>Ctrl</kbd> + <kbd>P</kbd>) wklej następującą komendę:
+| Nazwa algorytmu  |                                                             Złożoność                                                             |
+| :--------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
+| przez zliczanie  |                                       O(*n* + *k*), wymaga O(*n* + *k*) dodatkowej pamięci                                        |
+|  kubełkowe  Z  M |                                             O(*n*²), wymaga O(*k*) dodatkowej pamięci                                             |
+|  kubełkowe BEZ M |                                                                                                                                   |
+|    bąbelkowe     |                                                              O(*n*²)                                                              |
+| przez scalanie R |                                          O(*n*log*n*), wymaga O(*n*) dodatkowej pamięci                                           |
+| przez scalanie I |                                  jw. tu jednak z braku rekursji zaoszczędzimy czas i pamięć                                       |
+| przez kopcowanie |                                                           O(*n*log*n*)                                                            |
+| szybkie  STAND   |                                                Θ(*n*log*n*), pesymistyczny O(*n*²)                                                |
+| szybkie HOARE'S  |                                                Θ(*n*log*n*), pesymistyczny O(*n*²)                                                |
 
-    ext install ms-vscode.cpptools
+| Nazwa algorytmu  |                                                             Złożoność                                                             |
+| :--------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
+|    pozycyjne     | O(*d*(*n* + *k*)), gdzie *k* to wielkość domeny cyfr, a *d* to szerokość kluczy w cyfrach, wymaga O(*n* + *k*) dodatkowej pamięci |
+|   biblioteczne   |                                                O(*n*log*n*), pesymistyczny O(*n*²)                                                |
+| przez wybieranie |                                                              O(*n*²)                                                              |
+| przez wstawianie |                                                              O(*n*²)                                                              |
+
+## Działanie algorytmów sortujących w praktyce
+
+### Dla *n* = 100 000 000 i wartości losowych:
+
+|                     Algorytm | Czas wykonywania       |
+| ---------------------------: | :--------------------- |
+|                    quicksort | 11.11s                 |
+|       mergesort (iteracyjny) | 11.81s                 |
+|                    kubełkowe | 5.14s (32768 kubełków) |
+| kubełkowe (tablica struktur) | 0.68s (32768 kubełków) |
+|                     heapsort | 55.69s                 |
+
+### Dla *n* = 100 000 000 i wartości posortowanych:
+
+|                     Algorytm | Czas wykonywania       |
+| ---------------------------: | :--------------------- |
+|                    quicksort | brak odpowiedzi - błąd |
+|       mergesort (iteracyjny) | 5.06s                  |
+|                    kubełkowe | 3.96s (32768 kubełków) |
+| kubełkowe (tablica struktur) | 0.41s                  |
+|                     heapsort | 23.92s                 |
+
+Dla quicksort juz dla 100 tys. brak odpowiedzi - błąd!
