@@ -39,8 +39,6 @@ a błędy i ostrzeżenia można zignorować.
 |    pozycyjne     | O(*d*(*n* + *k*)), gdzie *k* to wielkość domeny cyfr, a *d* to szerokość kluczy w cyfrach, wymaga O(*n* + *k*) dodatkowej pamięci |
 |   biblioteczne   |                                                O(*n*log*n*), pesymistyczny O(*n*²)                                                |
 | przez wybieranie |                                                              O(*n*²)                                                              |
-
-
 | przez wstawianie |                                                              O(*n*²)                                                              |
 
 ## Działanie algorytmów sortujących w praktyce
