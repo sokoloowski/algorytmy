@@ -6,7 +6,7 @@
 
 void Counting_sort::print(int *tab, int n) {
     for(int i=0;i<n;i++){
-        printf("%d ", tab[i]);
+        printf("%d,", tab[i]);
     }
 }
 

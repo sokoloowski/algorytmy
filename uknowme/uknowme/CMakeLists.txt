@@ -7,10 +7,11 @@ add_executable(uknowme
 
         main.cpp
         Counting_sort.cpp Counting_sort.h
+        Bucket_sort.cpp Bucket_sort.h
+        Bucket_sort_advanced.cpp Bucket_sort_advanced.h
+        Bubble_sort.cpp Bubble_sort.h
         Merge_sort_rec.cpp Merge_sort_rec.h
         Merge_sort_iter.cpp Merge_sort_iter.h
-        Bucket_sort.cpp Bucket_sort.h
-        Bubble_sort.cpp Bubble_sort.h
         Heap_sort.cpp Heap_sort.h
         Quick_sort_base.cpp Quick_sort_base.h
         Quick_sort_advanced.cpp Quick_sort_advanced.h)

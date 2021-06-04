@@ -1,5 +1,6 @@
 #include "Counting_sort.h"
 #include "Bucket_sort.h"
+#include "Bucket_sort_advanced.h"
 #include "Bubble_sort.h"
 #include "Merge_sort_rec.h"
 #include "Merge_sort_iter.h"
@@ -16,6 +17,9 @@ int main() {
 
 //// Bucket_sort - standard (with malloc)
     Bucket_sort::bucket_sort_main();
+
+//// Bucket_sort - advanced (without malloc)
+    Bucket_sort_advanced::bucket_sort_main();
 
 //// Bubble sort
     Bubble_sort::bubble_sort_main();
@@ -34,8 +38,6 @@ int main() {
 
 //// Quick sort - with advanced partition
     Quick_sort_advanced::quick_sort_advanced_main();
-
-
 
     return 0;
 }
