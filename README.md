@@ -24,16 +24,22 @@ a błędy i ostrzeżenia można zignorować.
 
 | Nazwa algorytmu  |                                                             Złożoność                                                             |
 | :--------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
-|    bąbelkowe     |                                                              O(*n*²)                                                              |
-| przez wstawianie |                                                              O(*n*²)                                                              |
-|  przez scalanie  |                                          O(*n*log*n*), wymaga O(*n*) dodatkowej pamięci                                           |
 | przez zliczanie  |                                       O(*n* + *k*), wymaga O(*n* + *k*) dodatkowej pamięci                                        |
-|    kubełkowe     |                                             O(*n*²), wymaga O(*k*) dodatkowej pamięci                                             |
+|  kubełkowe  Z  M |                                             O(*n*²), wymaga O(*k*) dodatkowej pamięci                                             |
+|  kubełkowe BEZ M |                                                                                                                                   |
+|    bąbelkowe     |                                                              O(*n*²)                                                              |
+| przez scalanie R |                                          O(*n*log*n*), wymaga O(*n*) dodatkowej pamięci                                           |
+| przez scalanie I |                                                                                                                                   |
+| przez kopcowanie |                                                           O(*n*log*n*)                                                            |
+| szybkie  STAND   |                                                Θ(*n*log*n*), pesymistyczny O(*n*²)                                                |
+| szybkie HOARE'S  |                                                                                                                                   |
+| :--------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
 |    pozycyjne     | O(*d*(*n* + *k*)), gdzie *k* to wielkość domeny cyfr, a *d* to szerokość kluczy w cyfrach, wymaga O(*n* + *k*) dodatkowej pamięci |
 |   biblioteczne   |                                                O(*n*log*n*), pesymistyczny O(*n*²)                                                |
 | przez wybieranie |                                                              O(*n*²)                                                              |
-|     szybkie      |                                                Θ(*n*log*n*), pesymistyczny O(*n*²)                                                |
-| przez kopcowanie |                                                           O(*n*log*n*)                                                            |
+
+
+| przez wstawianie |                                                              O(*n*²)                                                              |
 
 ## Działanie algorytmów sortujących w praktyce
 
