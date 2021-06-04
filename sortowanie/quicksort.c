@@ -1,80 +1,49 @@
-/**
- * @file quicksort.c
- * @author Piotr Sokołowski (piotrsokolowski00@outlook.com)
- * @brief Sortowanie szybkie
- * @version 0.1
- * @date 2021-06-03
- * 
- * @copyright Copyright (c) 2021
- * 
- */
-
 #include <stdio.h>
 
-/**
- * @brief Dzielenie tablicy na mniejsze (dziel i zwyciężaj)
- * 
- * @param Tab tablica do podzielenia
- * @param p początek
- * @param r koniec
- * @return środek tablicy Tab
- */
-int quicksort_partition(double *Tab, int p, int r)
+void swap(double *a, double *b)
 {
-    int i = p - 1, j = r + 1;
-    double x = Tab[p];
-    while (1)
+    double temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int partition(double *tab, int start, int end)
+{
+    int pivot = tab[end];
+    int i = (start - 1);
+    for (int j = start; j < end; j++)
     {
-        j--;
-        while (Tab[j] > x)
-            j--;
-        i++;
-        while (Tab[i] < x)
-            i++;
-        if (i < j)
+        if (tab[j] < pivot)
         {
-            int pom = Tab[i];
-            Tab[i] = Tab[j];
-            Tab[j] = pom;
+            i++;
+            swap(&tab[i], &tab[j]);
         }
-        else
-            return j;
     }
+    swap(&tab[i + 1], &tab[end]);
+    return i + 1;
 }
 
-/**
- * @brief Quicksort
- * 
- * @param Tab tablica do posortowania
- * @param p początek przedziału
- * @param r koniec przedziału
- */
-void quicksort(double *Tab, int p, int r)
+void quicksort(double *tab, int start, int end)
 {
-    int q;
-    if (p < r)
+    if (start < end)
     {
-        q = quicksort_partition(Tab, p, r);
-        quicksort(Tab, p, q);
-        quicksort(Tab, q + 1, r);
+        int i = partition(tab, start, end);
+        quicksort(tab, start, i - 1);
+        quicksort(tab, i + 1, end);
     }
 }
 
-/**
- * @brief Funkcja główna sortowania szybkiego.
- * Po zakończeniu działania algorytmu wypisywana jest posortowana tablica
- * 
- * @param to_sort Tablica do posortowania
- */
-int quicksort_main(double *to_sort)
+int main(void)
 {
-    double tablica[20] = {0};
-    for (int i = 0; i < 20; i++)
-        tablica[i] = to_sort[i];
+    double tablica[20] = {1, 5, 4.36, 7, 12, 17, -11, 8, 0, 86,
+                          12, 1, 17, 2, 21, 56, 53, -20, 10, 15};
+
     quicksort(tablica, 0, 20 - 1);
 
     printf("Quicksort\n");
     for (int i = 0; i < 20; i++)
+    {
         printf("%.2f ", tablica[i]);
-    printf("\n\n");
+    }
+    printf("\n");
 }
