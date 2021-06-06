@@ -18,12 +18,15 @@ void Counting_sort::counting_sort(const int *tab) {
     for (i=0;i<k;i++){
         c[i]=0;
     }
+//  zlaczanie wystąpień danej liczby
     for (i=0;i<n;i++){
         c[tab[i]]++;
     }
+// ile liczb wystąpiło do danego miejsca
     for (i=1;i<k;i++){
         c[i]+=c[i-1];
     }
+//  przerobienie na wynik
     for(i=0;i<n;i++){
         wynik[c[tab[i]] -1]=tab[i];
         c[tab[i]]--;

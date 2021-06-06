@@ -11,8 +11,12 @@ using namespace std;
 class Bucket_sort {
 
 private:
-    struct el_listy;
-    static void sort(const int* tab, int n);
+    struct el_listy{
+        el_listy* next;
+        int value;
+    };
+
+    static void sort(int* tab, int n);
     static void print(int* tab, int n);
 
 public:

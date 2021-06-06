@@ -2,11 +2,13 @@
 #include "Bucket_sort.h"
 #include "Bucket_sort_advanced.h"
 #include "Bubble_sort.h"
+#include "Insertion_sort.h"
 #include "Merge_sort_rec.h"
 #include "Merge_sort_iter.h"
 #include "Heap_sort.h"
 #include "Quick_sort_base.h"
 #include "Quick_sort_advanced.h"
+#include "Stack.h"
 using namespace std;
 
 
@@ -24,6 +26,9 @@ int main() {
 //// Bubble sort
     Bubble_sort::bubble_sort_main();
 
+//// Insertion sort
+    Insertion_sort::insertion_sort_main();
+
 //// Merge sort rec.
     Merge_sort_rec::merge_sort_rec_main();
 
@@ -38,6 +43,9 @@ int main() {
 
 //// Quick sort - with advanced partition
     Quick_sort_advanced::quick_sort_advanced_main();
+
+//// Stack
+    Stack::stack_main();
 
     return 0;
 }

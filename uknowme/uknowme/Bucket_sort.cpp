@@ -5,18 +5,13 @@
 #include "Bucket_sort.h"
 
 
-struct Bucket_sort::el_listy{
-    el_listy* next;
-    int v;
-};
-
 void Bucket_sort::print(int *tab, int n) {
     for (int i = 0; i < n; i++) {
         printf("%d,", tab[i]);
     }
 }
 
-void Bucket_sort::sort(const int *tab, int n) {
+void Bucket_sort::sort(int *tab, int n) {
     el_listy* first[100];
     el_listy* last[100];
     for (int i = 0; i < 100; i++){
@@ -27,14 +22,14 @@ void Bucket_sort::sort(const int *tab, int n) {
 
     for (int i = 0; i < n; i++) {
         el_listy* nel = new el_listy();
-        nel->v = tab[i];
-        if (last[nel->v]) {
-            last[nel->v]->next = nel;
-            last[nel->v] = nel;
+        nel->value = tab[i];
+        if (last[nel->value]) {
+            last[nel->value]->next = nel;
+            last[nel->value] = nel;
         }
-        if (!first[nel->v]) {
-            first[nel->v] = nel;
-            last[nel->v] = nel;
+        if (!first[nel->value]) {
+            first[nel->value] = nel;
+            last[nel->value] = nel;
         }
     }
     //pozbieraj to w calosc
@@ -46,13 +41,11 @@ void Bucket_sort::sort(const int *tab, int n) {
         for (int i = 0; i < 100; i++) {
             el_listy* dys = first[i];
             while (dys) {
-                sortedTab[m++] = dys->v;
+                tab[m++] = dys->value;
                 dys = dys->next;
             }
         }
     }
-
-    print(sortedTab, n);
 }
 
 void Bucket_sort::bucket_sort_main() {
@@ -62,6 +55,7 @@ void Bucket_sort::bucket_sort_main() {
     cout << endl << "Bucket sort: " << endl;
 
     sort(tab,n);
+    print(tab, n);
 
     cout << endl << "End of Bucket sort" << endl;
 }

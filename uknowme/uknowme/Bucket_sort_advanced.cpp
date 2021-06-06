@@ -15,7 +15,7 @@ void Bucket_sort_advanced::print(Bucket_sort_advanced::el_listy *tab2, int w, in
 int Bucket_sort_advanced::sort(const int *tab, int n, int liczba_kubelkow, struct el_listy *element){
     int poczatek_1[liczba_kubelkow+1];
     int koniec_1[liczba_kubelkow+1];
-    struct el_listy *ws=element;
+    struct el_listy *ws = element;
     int ws0, ws2;
 
     for(int i=0;i<liczba_kubelkow+1;i++){
@@ -39,7 +39,7 @@ int Bucket_sort_advanced::sort(const int *tab, int n, int liczba_kubelkow, struc
         ws++;
     }
 
-    int i=0;
+    int i;
     for(i =0;poczatek_1[i]==-1;i++);
     ws0 = poczatek_1[i];
     ws2 = koniec_1[i];
