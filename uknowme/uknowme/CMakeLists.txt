@@ -16,4 +16,5 @@ add_executable(uknowme
         Heap_sort.cpp Heap_sort.h
         Quick_sort_base.cpp Quick_sort_base.h
         Quick_sort_advanced.cpp Quick_sort_advanced.h
-        Stack.cpp Stack.h)
+        Stack.cpp Stack.h
+        Queue.cpp Queue.h)

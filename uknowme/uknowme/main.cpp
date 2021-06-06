@@ -9,6 +9,7 @@
 #include "Quick_sort_base.h"
 #include "Quick_sort_advanced.h"
 #include "Stack.h"
+#include "Queue.h"
 using namespace std;
 
 
@@ -46,6 +47,9 @@ int main() {
 
 //// Stack
     Stack::stack_main();
+
+//// Queue
+    Queue::queue_main();
 
     return 0;
 }
