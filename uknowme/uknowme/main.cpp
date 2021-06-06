@@ -10,6 +10,7 @@
 #include "Quick_sort_advanced.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "Priority_queue.h"
 using namespace std;
 
 
@@ -50,6 +51,9 @@ int main() {
 
 //// Queue
     Queue::queue_main();
+
+//// Priority queue
+    Priority_queue::priority_queue_main();
 
     return 0;
 }

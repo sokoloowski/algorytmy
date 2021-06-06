@@ -49,8 +49,8 @@ void Queue::queue_main() {
     insert(6.45);
     insert(2342.347);
     for (int i = start; i != koniec; i++){
-        printf(", Item: %.2f\n", get());
+        printf(", Item: %.2f", get());
     }
 
-    cout << endl << "FIFO koniec" << endl;
+    cout << endl << "end of FIFO" << endl;
 }

@@ -21,7 +21,6 @@ private:
 
 public:
 
-//    Queue();
     static void queue_main();
 };
 
