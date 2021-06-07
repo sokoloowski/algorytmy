@@ -11,6 +11,7 @@
 #include "Stack.h"
 #include "Queue.h"
 #include "Priority_queue.h"
+#include "Binary_search.h"
 using namespace std;
 
 
@@ -54,6 +55,9 @@ int main() {
 
 //// Priority queue
     Priority_queue::priority_queue_main();
+
+//// Binary search
+    Binary_search::binary_search_main();
 
     return 0;
 }
