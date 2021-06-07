@@ -7,6 +7,7 @@ add_executable(uknowme
 
         main.cpp
         Counting_sort.cpp Counting_sort.h
+        Position_sort.cpp Position_sort.h
         Bucket_sort.cpp Bucket_sort.h
         Bucket_sort_advanced.cpp Bucket_sort_advanced.h
         Insertion_sort.cpp Insertion_sort.h
@@ -18,4 +19,6 @@ add_executable(uknowme
         Quick_sort_advanced.cpp Quick_sort_advanced.h
         Stack.cpp Stack.h
         Queue.cpp Queue.h
-        Priority_queue.cpp Priority_queue.h Binary_search.cpp Binary_search.h BST_tree.cpp BST_tree.h)
+        Priority_queue.cpp Priority_queue.h
+        Binary_search.cpp Binary_search.h
+        BST_tree.cpp BST_tree.h)

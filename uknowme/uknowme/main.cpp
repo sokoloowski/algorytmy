@@ -13,6 +13,7 @@
 #include "Priority_queue.h"
 #include "Binary_search.h"
 #include "BST_tree.h"
+#include "Position_sort.h"
 using namespace std;
 
 
@@ -20,6 +21,9 @@ int main() {
 
 //// Counting sort
     Counting_sort::counting_sort_main();
+
+//// Position sort
+    Position_sort::position_sort_main();
 
 //// Bucket_sort - standard (with malloc)
     Bucket_sort::bucket_sort_main();
