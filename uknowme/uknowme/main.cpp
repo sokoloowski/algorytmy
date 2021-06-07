@@ -12,6 +12,7 @@
 #include "Queue.h"
 #include "Priority_queue.h"
 #include "Binary_search.h"
+#include "BST_tree.h"
 using namespace std;
 
 
@@ -58,6 +59,11 @@ int main() {
 
 //// Binary search
     Binary_search::binary_search_main();
+
+//// BST tree + search
+    BST_tree::bst_tree_main();
+
+
 
     return 0;
 }

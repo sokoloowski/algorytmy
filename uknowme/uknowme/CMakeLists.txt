@@ -18,4 +18,4 @@ add_executable(uknowme
         Quick_sort_advanced.cpp Quick_sort_advanced.h
         Stack.cpp Stack.h
         Queue.cpp Queue.h
-        Priority_queue.cpp Priority_queue.h Binary_search.cpp Binary_search.h)
+        Priority_queue.cpp Priority_queue.h Binary_search.cpp Binary_search.h BST_tree.cpp BST_tree.h)
