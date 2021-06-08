@@ -18,12 +18,20 @@ private:
         struct Node* parent;
     };
 
-    static void wstaw(double wart, struct Node **root);
     static void wypisz(struct Node *root);
-    static struct Node* wyszukaj_maks(struct Node* ws);
+
     static struct Node* wyszukaj_min(struct Node* ws);
+    static struct Node* wyszukaj_maks(struct Node* ws);
     static struct Node* wyszukaj(struct Node* ws, double wartosc);
     static struct Node* nastepnik(struct Node* wezel);
+
+    static void leftRotation(struct Node **root, struct Node *x);
+    static void rightRotation(struct Node **root, struct Node *x);
+    static int getRotValue(unsigned int n);
+    static void DSW(struct Node **root, int n);
+
+
+    static void wstaw(double wart, struct Node **root);
 
 public:
     static void bst_tree_main();

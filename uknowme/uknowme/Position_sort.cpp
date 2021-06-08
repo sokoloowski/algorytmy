@@ -5,7 +5,7 @@
 #include "Position_sort.h"
 
 
-void Position_sort::print(int *tab, int n) {
+void Position_sort::print(const int *tab, int n) {
     for(int i=0;i<n;i++){
         printf("%d,", tab[i]);
     }

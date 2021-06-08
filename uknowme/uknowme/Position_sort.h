@@ -11,10 +11,10 @@ using namespace std;
 class Position_sort {
 
 private:
-    static void print(int *tab, int n);
-    static void radix_sort(int *tab, int n);
-    static void count_sort(int *tab, int n, int var);
+    static void print(const int *tab, int n);
     static int max(const int *tab, int n);
+    static void count_sort(int *tab, int n, int var);
+    static void radix_sort(int *tab, int n);
 
 public:
     static void position_sort_main();

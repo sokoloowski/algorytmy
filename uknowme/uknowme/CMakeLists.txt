@@ -21,4 +21,4 @@ add_executable(uknowme
         Queue.cpp Queue.h
         Priority_queue.cpp Priority_queue.h
         Binary_search.cpp Binary_search.h
-        BST_tree.cpp BST_tree.h)
+        BST_tree.cpp BST_tree_rotations.cpp BST_tree.h)

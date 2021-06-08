@@ -14,47 +14,16 @@ void BST_tree::wypisz(BST_tree::Node *root) {
     wypisz(root->right);
 }
 
-void BST_tree::wstaw(double wart, BST_tree::Node **root) {
-    struct Node *nowy = new Node;
-    struct Node *poprzednik, *ws;
-    nowy->left = nullptr;
-    nowy->right= nullptr;
-    nowy->wartosc = wart;
-    poprzednik = nullptr;
-    ws = *root;
-
-    while(ws){
-        poprzednik = ws;
-        if(wart >= ws->wartosc ) {
-            ws = ws->right;
-        }
-        else {
-            ws = ws->left;
-        }
+BST_tree::Node *BST_tree::wyszukaj_min(BST_tree::Node *ws) {
+    while(ws->left){
+        ws = ws->left;
     }
-
-    nowy->parent = poprzednik;
-    if(poprzednik == nullptr) {
-        *root = nowy;
-    }
-    else if(wart >= poprzednik->wartosc ){
-        poprzednik->right = nowy;
-    }
-    else {
-        poprzednik->left = nowy;
-    }
+    return ws;
 }
 
 BST_tree::Node *BST_tree::wyszukaj_maks(BST_tree::Node *ws) {
     while(ws->right){
         ws = ws->right;
-    }
-    return ws;
-}
-
-BST_tree::Node *BST_tree::wyszukaj_min(BST_tree::Node *ws) {
-    while(ws->left){
-        ws = ws->left;
     }
     return ws;
 }
@@ -89,6 +58,37 @@ BST_tree::Node *BST_tree::nastepnik(BST_tree::Node *wezel) {
     return poprzednik;
 }
 
+void BST_tree::wstaw(double wart, BST_tree::Node **root) {
+    struct Node *nowy = new Node;
+    struct Node *poprzednik, *ws;
+    nowy->left = nullptr;
+    nowy->right= nullptr;
+    nowy->wartosc = wart;
+    poprzednik = nullptr;
+    ws = *root;
+
+    while(ws){
+        poprzednik = ws;
+        if(wart >= ws->wartosc ) {
+            ws = ws->right;
+        }
+        else {
+            ws = ws->left;
+        }
+    }
+
+    nowy->parent = poprzednik;
+    if(poprzednik == nullptr) {
+        *root = nowy;
+    }
+    else if(wart >= poprzednik->wartosc ){
+        poprzednik->right = nowy;
+    }
+    else {
+        poprzednik->left = nowy;
+    }
+}
+
 void BST_tree::bst_tree_main() {
     struct  Node* root = nullptr;
 
@@ -114,6 +114,7 @@ void BST_tree::bst_tree_main() {
     else{
         cout << "brak \"nastepnika\"";
     }
+    DSW(&root, 6);
 
     cout << endl << "BST tree end" << endl;
 }
